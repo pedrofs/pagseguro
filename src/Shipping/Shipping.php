@@ -35,7 +35,7 @@ class Shipping
         $this->address = $address;
 
         if ($cost !== null) {
-            $this->cost = (float) $cost;
+            $this->cost = str_replace(',', '.', strval($cost));
         }
     }
 
